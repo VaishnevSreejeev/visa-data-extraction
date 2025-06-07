@@ -10,12 +10,12 @@ The application automatically identifies folder types, extracts specific data fi
 
 ## ✅ Work Completed on 05/06/2025 – Day 1
 
-    ### 1️⃣ Core Implementation
+    1️⃣ Core Implementation
     - Created `FastPDFExtractor` class to handle PDF parsing and data collection.
     - Used **PyMuPDF (`fitz`)** for fast text extraction from PDF files.
     - Implemented parallel processing with **ThreadPoolExecutor** to handle multiple ZIP files efficiently.
     
-    ### 2️⃣ Data Extraction
+    2️⃣ Data Extraction
     Regex patterns were built to extract the following fields:
     - `Created Date` → formatted as `DD-MM-YYYY`
     - `Duration` → e.g., `30 Days`
@@ -26,25 +26,25 @@ The application automatically identifies folder types, extracts specific data fi
     - `Date of Birth` → formatted as `DD-MM-YYYY`
     - Folder classification → `Type A` or `Type B` (based on presence of `eVisa.pdf`)
     
-    ### 3️⃣ Performance Optimizations
+    3️⃣ Performance Optimizations
     - Precompiled regex for efficiency.
     - Multithreaded ZIP file processing.
     - Utilized **Polars** for high-speed DataFrame operations and CSV export.
     - Implemented auto-cleanup for temporary directories.
     
-    ### 4️⃣ Output Format
+    4️⃣ Output Format
     Final CSV includes:
     ```
     File Name, DATE, TYPE DR, TYPE OP, NATIONALITY, NAME, PASSPORT NO, DOB, Folder Contains Multiple Files
     ```
     
-    ### 🛠️ Tech Stack
+    🛠️ Tech Stack
     - `PyMuPDF` – PDF text extraction
     - `Polars` – Fast DataFrame manipulation
     - `concurrent.futures` – Parallel ZIP file processing
     - `Regex` – Data extraction
     
-    ### 🧪 Usage
+    🧪 Usage
     ```python
     extractor = FastPDFExtractor()
     extractor.process_all_zips("zip_folder_path", "output.csv")
@@ -54,7 +54,7 @@ The application automatically identifies folder types, extracts specific data fi
 
 ## 🚀 Work Completed on 06/06/2025 – Day 2
 
-    ### 🖥️ GUI Development
+    🖥️ GUI Development
     - Added a simple GUI using **Tkinter**.
     - Users can:
       - Browse and select ZIP folder
@@ -62,27 +62,27 @@ The application automatically identifies folder types, extracts specific data fi
       - Start extraction process via button
     - Progress and completion messages are shown in the interface.
     
-    ### ⚙️ GUI Features
+    ⚙️ GUI Features
     - File/folder pickers for input and output
     - Button to initiate extraction
     - Real-time status display
     - Error handling and completion alert
     
-    ### 📦 Deployment
+    📦 Deployment
     - Packaged application as `.exe` using **PyInstaller**:
       ```bash
       pyinstaller --onefile --icon=icon.ico ZipHandle.py
       ```
     - Verified functionality on systems without Python installed.
     
-    ### 🧰 Additional Stack
+    🧰 Additional Stack
     - `Tkinter` – GUI framework
     - `PyInstaller` – EXE bundling tool
     
     ---
     
-    ## 📈 Results
-    - Fully working desktop tool for non-technical users.
+📈 Results
+    - Fully working desktop tool .
     - Accurately processes nested ZIP-PDF structures.
     - Fast and scalable processing using multithreading.
     - Professional UI and easy deployment as EXE.
