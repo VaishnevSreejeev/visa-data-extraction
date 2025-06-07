@@ -1,5 +1,5 @@
 
-# 🧾 PDF Data Extraction Project
+# 🧾ZipHandle | A PDF Data Extraction Project
 
 ## 📌 Project Overview
 A desktop application to extract structured data from **Tourism Permit PDFs** stored in ZIP files and export the data into a CSV file.
